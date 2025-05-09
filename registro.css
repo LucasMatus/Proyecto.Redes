@@ -1,0 +1,219 @@
+@import url("https://fonts.google.com/specimen/Source+Serif+4?preview.text=Surassic%27s&query=s");
+
+
+/*encabezado*/
+header{
+    animation: aparecer 2s; /*invoco la variable*/
+    color: #adb5bd; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: transparent;
+    
+}
+
+
+/*sacamos el color azul a las listas con links*/
+.barradenavegacion a{
+    text-decoration: none;
+    color: #adb5bd;
+}
+
+
+/*le ponemos color a las etiquetas con links cuando pasamos con el cursor*/
+.barradenavegacion a:hover{
+    color: #dee2e6;
+}
+
+/*Desplegamos las listas horizontalmente*/
+.listasdelabarradenavegacion {
+    display: flex;
+    list-style-type: none;
+    
+}
+
+.listasdelabarradenavegacion li {
+    padding: 20px;
+    font-family:  sans-serif;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+/* css que cambia el indexconsultas*/
+
+/*Pagina de consultas*/
+body {
+    background-image: url("../../Imagenes/Canva.jpeg");  
+    background-size: cover;  /*estoy agregando una imagen para el fondo del formulario*/
+    background-position: center center;
+    background-attachment: fixed;
+    
+ }
+
+
+.formulario {
+background-color: #111010;
+padding: 15px;
+border-radius: 15px;/*redondeo de esquinas*/
+box-shadow: 0 0 5px;    
+width: 500px;
+margin: auto; /*estoy centrando el formulario */
+animation: flotar 3s ease-in-out infinite;
+}
+
+
+@keyframes flotar{
+    0%,
+    100%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(-10);
+    }
+}
+
+
+legend{
+    font-family:specimen;
+    color: white;
+    padding: 0px;
+}
+
+label {
+    font-family:specimen;
+display: block;    /*le estoy dando orden a lo de adentro del formulario para que esten la encuenta una abajo de la otra*/
+margin-bottom: 10px;
+color: white;
+}
+
+input {
+width: 80%;
+padding: 10px;
+margin-bottom: 30px;
+border: 1px solid #ccc;
+border-radius: 20px;
+}
+/*le damos estetica a los botones*/
+button {
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.botonenviar{
+    background-color: rgb(0, 255, 0);
+}
+
+.botonborrar{
+    background-color: red;
+}
+
+.botonenviar:hover{
+    background-color: green;
+}
+
+.botonborrar:hover{
+    background-color: rgb(150, 23, 23);
+}
+
+
+
+    /*css que cambia el footer*/
+
+    ul{
+        list-style: none;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left:-30px ;
+    }
+
+    .contenedor{
+        max-width: 1200;
+        margin: 0px auto;
+        flex: 1;
+        
+    }
+
+    footer{
+        background-color: #343a40;
+        padding: 80px;
+        margin-top: 240px;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: -10px;
+    }
+
+    .filasdelfooter{
+        display: flex;
+        flex-wrap: wrap; /*Para que se vea bien si se achica la pagina*/
+    }
+
+    .linksdelfooter{
+        width: 25%;
+        padding: 0 15px;
+    }
+
+    .linksdelfooter h4 {
+        font-family: sans-serif;
+        font-size: 25px;
+        color: rgb(88, 134, 115);
+        font-weight: 700; /*Cambio el grosor de la letra*/
+        border-bottom: 5px solid rgb(0, 255, 149); /*Agrego un subrayado*/
+        padding-bottom: 10px; /*pongo un espacio entre el titulo y el subrayado*/
+        display: inline-block;/*Corrigo el subrayado para que sea del mismo tamaño que el titulo*/
+        
+        
+    }
+
+    .linksdelfooter ul li a {
+        font-size: 17px;
+        text-decoration: none;
+        color: rgb(228, 203, 203);
+        transition: all .4s ease;
+
+        
+    }
+
+    .linksdelfooter ul li a:hover {
+        color: white;
+        padding-left: 6px;
+
+    }
+
+
+    /*le decimos a filasdelfooter que cuando baje de 991px se centre todo (basicamente el responsive)*/
+    @media(max-width:991px) {
+        .filasdelfooter{
+            text-align: center;
+        }
+
+        .linksdelfooter{
+            width: 100%;
+            margin-bottom: 30px;
+
+        }
+    }
+
+
